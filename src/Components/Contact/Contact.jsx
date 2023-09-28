@@ -20,14 +20,33 @@ const Contact = () => {
         form.current,
         "EzekblhteHAOuXaU0"
       )
-      .then((result) => {
-        console.log(result.text);
-        setDone(true);
-      })
-      .catch((err) => {
-        console.log(err.text);
-      });
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_995rs6n",
+  //       "template_4ykphlc",
+  //       form.current,
+  //       "EzekblhteHAOuXaU0"
+  //     )
+  //     .then((result) => {
+  //       console.log(result.text);
+  //       setDone(true);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.text);
+  //     });
+  // };
 
   return (
     <div className="contact-form">
