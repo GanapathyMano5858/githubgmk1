@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import Toggle from "../Toggle/Toggle";
 
 function Navbar() {
   return (
@@ -14,7 +15,9 @@ function Navbar() {
             />
           </a> */}
         </div>
-        <span>Toggle Button</span>
+        <span>
+          <Toggle />
+        </span>
       </div>
       <div className="n-right">
         <div className="n-list">

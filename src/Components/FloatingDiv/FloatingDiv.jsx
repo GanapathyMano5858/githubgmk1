@@ -1,9 +1,8 @@
-import React from "react";
 import "./FloatingDiv.css";
 
 const FloatingDiv = ({ image, txt1, txt2 }) => {
   return (
-    <div className="floatingdiv">
+    <div className="floatingdiv" style={{}}>
       <img src={image} alt="" />
       <span>
         {txt1}
