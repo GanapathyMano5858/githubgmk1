@@ -5,7 +5,8 @@ function Navbar() {
   return (
     <div className="n-wrapper">
       <div className="n-left">
-        <div className="n-name">ManO
+        <div className="n-name">
+          ManO
           {/* <a href="https://www.fontspace.com/category/stencil">
             <img
               src="https://see.fontimg.com/api/renderfont4/MVler/eyJyIjoiZnMiLCJoIjozOSwidyI6MTAwMCwiZnMiOjM5LCJmZ2MiOiIjMTI3MUZBIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TWFuTw/raginy-regular.png"

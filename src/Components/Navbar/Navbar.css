@@ -1,4 +1,4 @@
-@import url(../../fonts/RaginyRegular-rgwZA.ttf);
+/* @import url(../../fonts/RaginyRegular-rgwZA.ttf); */
 
 .n-wrapper {
     height: 10vh;
@@ -14,16 +14,15 @@
 }
 
 .n-name {
-    font-family: "RaginyRegular";
-    font-size: 1.3rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
-.n-name>img {
+/* .n-name>img {
     width: 8rem;
     padding: 10px 0 0 0;
     color: var(--orange);
-}
+} */
 
 .n-right {
     display: flex;
