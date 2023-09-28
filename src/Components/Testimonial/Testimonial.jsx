@@ -5,6 +5,9 @@ import profilePic1 from "../../img/profile1.jpg";
 import profilePic2 from "../../img/profile2.jpg";
 import profilePic3 from "../../img/profile3.jpg";
 import profilePic4 from "../../img/profile4.jpg";
+import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
+import "swiper/css";
 
 const Testimonial = () => {
   const clients = [
@@ -33,8 +36,8 @@ const Testimonial = () => {
   return (
     <div className="t-wrapper">
       <div className="t-heading">
-        <span>Clients always get</span>
-        <span>Exceptional Work</span>
+        <span>Clients always get </span>
+        <span>Exceptional Work </span>
         <span>form me...</span>
         <div
           className="blur t-blur1"
@@ -43,12 +46,18 @@ const Testimonial = () => {
         <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
       </div>
       {/* slider */}
-      <Swiper>
+      <Swiper
+        modules={[Pagination]}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+      >
         {clients.map((clients, index) => {
           return (
             <SwiperSlide key={index}>
-              <img src={clients.img} alt="clients img" />
-              <span>{clients.review}</span>
+              <div className="testimonial">
+                <img src={clients.img} alt="clients img" />
+                <span>{clients.review}</span>
+              </div>
             </SwiperSlide>
           );
         })}
