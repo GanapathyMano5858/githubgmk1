@@ -6,10 +6,12 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import Ganapathy_Mano_CV from "./Ganapathy_Mano_CV.pdf";
 import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const transition = { duraction: 1, type: "spring" };
   return (
     <div className="services">
       {/* left side */}
@@ -29,30 +31,42 @@ const Services = () => {
       </div>
       {/* right side */}
       <div className="cards">
-        <div style={{ left: "14rem" }}>
+        <motion.div
+          initial={{ left: "25rem" }}
+          whileInView={{ left: "14rem" }}
+          transition={transition}
+        >
           {/* first card */}
           <Card
             emoji={HeartEmoji}
             heading={"Design"}
             detail={"Figma, Photoshop, Illustrator, Adobe Xd"}
           />
-        </div>
+        </motion.div>
         {/* second card */}
-        <div style={{ top: "12rem", left: "-4rem" }}>
+        <motion.div
+          initial={{ left: "-11rem", top: "12rem" }}
+          whileInView={{ left: "-4rem" }}
+          transition={transition}
+        >
           <Card
             emoji={Glasses}
             heading={"Developer"}
             detail={"HTML5, CSS3, Bootstrap, JavaScript, ReactJS"}
           />
-        </div>
+        </motion.div>
         {/* third card */}
-        <div style={{ top: "19rem", left: "12rem" }}>
+        <motion.div
+          initial={{ top: "22rem", left: "25rem" }}
+          whileInView={{ left: "19rem", top: "22rem" }}
+          transition={transition}
+        >
           <Card
             emoji={Humble}
             heading={"UI/UX"}
             detail={"Lorem ipsum, dolor sit amet consectetur adipisicing elit."}
           />
-        </div>
+        </motion.div>
         <div
           className="blur s-blur2"
           style={{ background: "var(--purple)" }}
