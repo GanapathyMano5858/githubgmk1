@@ -1,62 +1,63 @@
 import React from "react";
 import "./Testimonial.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 import profilePic1 from "../../img/profile1.jpg";
 import profilePic2 from "../../img/profile2.jpg";
 import profilePic3 from "../../img/profile3.jpg";
 import profilePic4 from "../../img/profile4.jpg";
-import { Pagination } from "swiper/modules";
-import "swiper/css/pagination";
-import "swiper/css";
 
 const Testimonial = () => {
   const clients = [
     {
       img: profilePic1,
       review:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui id, quaerat, saepe, ipsa minus quidem at ducimus quasi soluta hic porro fugiat alias. Consequatur pariatur quo odio corrupti optio fuga",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis!",
     },
     {
       img: profilePic2,
       review:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi distinctio fugit eaque, omnis fugiat non dolorum eligendi molestias delectus numquam, iste quisquam inventore architecto nemo voluptatem doloribus labore. Obcaecati, itaque.",
+        "Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
     },
     {
       img: profilePic3,
       review:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere aperiam, quo minima magnam repellat at delectus, alias sequi laudantium nostrum aliquam.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem",
     },
     {
       img: profilePic4,
       review:
-        " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum molestias odit quibusdam ipsam, facere sapiente quas repellat dignissimos unde enim ipsa nesciunt omnis fugit nihil beatae quae atque illo adipisci,quam sint quos culpa? Fuga laborum doloribus ex quisquam.",
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem",
     },
   ];
 
   return (
-    <div className="t-wrapper">
+    <div className="t-wrapper" id="testimonial">
       <div className="t-heading">
         <span>Clients always get </span>
         <span>Exceptional Work </span>
-        <span>form me...</span>
+        <span>from me...</span>
         <div
           className="blur t-blur1"
           style={{ background: "var(--purple)" }}
         ></div>
         <div className="blur t-blur2" style={{ background: "skyblue" }}></div>
       </div>
-      {/* slider */}
       <Swiper
+        // install Swiper modules
         modules={[Pagination]}
         slidesPerView={1}
         pagination={{ clickable: true }}
       >
-        {clients.map((clients, index) => {
+        {clients.map((client, index) => {
           return (
             <SwiperSlide key={index}>
               <div className="testimonial">
-                <img src={clients.img} alt="clients img" />
-                <span>{clients.review}</span>
+                <img src={client.img} alt="" />
+                <span>{client.review}</span>
               </div>
             </SwiperSlide>
           );

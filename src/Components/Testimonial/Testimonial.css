@@ -68,10 +68,21 @@
     justify-content: center;
 }
 
-.t-wrapper .swiper-pagination-bullet-active{
+.t-wrapper .swiper-pagination-bullet-active {
     background: var(--orange);
     width: 2rem;
     /* height: 1rem; */
     border-radius: .5rem
 }
 
+
+@media screen and (max-width: 480px) {
+    .t-wrapper {
+        padding: 0;
+    }
+
+    .testimonial>img {
+        width: 70px;
+        height: 70px;
+    }
+}

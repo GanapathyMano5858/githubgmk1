@@ -13,7 +13,7 @@ const Services = () => {
   const darkMode = theme.state.darkMode;
   const transition = { duraction: 1, type: "spring" };
   return (
-    <div className="services">
+    <div className="services" id="Services">
       {/* left side */}
       <div className="awesome">
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
