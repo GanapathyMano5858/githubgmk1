@@ -28,7 +28,7 @@ const Works = () => {
           <br />
           sit amet consectetur, adipisicing elitipisci omnis minus veritatis
         </spane>
-        <button className="button s-button">Hire ME</button>
+        <button className="button w-button">Hire ME</button>
         <div className="blur s-blur1" style={{ background: "#C1F5FF" }}></div>
       </div>
 
