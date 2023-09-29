@@ -23,6 +23,7 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setDone(true);
         },
         (error) => {
           console.log(error.text);

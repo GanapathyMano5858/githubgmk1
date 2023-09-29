@@ -8,6 +8,7 @@ import MusicApp from "../../img/musicapp.png";
 import "swiper/css";
 import { useContext } from "react";
 import { themeContext } from "../../Context";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Portfolio = () => {
   const theme = useContext(themeContext);
@@ -20,11 +21,33 @@ const Portfolio = () => {
 
       {/* slider */}
       <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        pagination={{ clickable: true }}
         spaceBetween={3}
-        slidesPerView={3}
+        slidesPerView={2.5}
+        centeredSlides={true}
         grabCursor={true}
+        navigation={true}
+        loop={true}
+        autoplay={{
+          delay: 500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         className="portfolio-slider"
       >
+        <SwiperSlide>
+          <img src={Sidebar} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Ecommerce} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={MusicApp} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={HOC} alt="" />
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Sidebar} alt="" />
         </SwiperSlide>
